@@ -25,7 +25,16 @@
 }
 
 .App-link {
-  color: linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(197, 100%, 64%, 1) 43%, hsla(186, 100%, 69%, 1) 100%);
+  font-weight: bolder;
+  font-size: 5em;
+  background: linear-gradient(
+    90deg,
+    hsla(217, 100%, 50%, 1) 0%,
+    hsla(197, 100%, 64%, 1) 60%,
+    hsla(186, 100%, 69%, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 @keyframes App-logo-spin {
