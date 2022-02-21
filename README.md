@@ -1,4 +1,4 @@
-# Portofolios
+# Portofolio
 
 A work in progress portofolio, Showing my recent apps.
 
