@@ -12,6 +12,7 @@ export default function LandingPage() {
           <a className="headerLineTwo">something special and </a>
           <a className="headerLineThree">have fun along the way.</a>
         </h1>
+       <section className='gradientShadow'><button>Book a Call</button></section>
       </section>
 
     </main>

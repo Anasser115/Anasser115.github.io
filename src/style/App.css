@@ -9,22 +9,23 @@
   font-weight: normal;
 }
 
-html, body {
-  /* background-color: blue; */
-}
 .Apps {
-  /* display: flex; */
+
   /* background-color: red; */
-height: 100vh;
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+
 }
 
 .mainContainer {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   display: grid;
   grid-template-rows: 1fr 4fr;
   grid-template-columns: 1fr 1fr;
   /* background-color: lightslategray; */
+  scroll-snap-align: start;
 }
 
 .toolBar {
@@ -38,11 +39,44 @@ height: 100vh;
   display: grid;
   grid-template-columns: 1fr 3fr 3fr 1fr;
   /* background-color: lightpink; */
+
+}
+
+.gradientShadow {
+  margin-top: 5%;
+  margin-left: 2.5%;
+  grid-row: 4/5;
+  /* background-color: blueviolet; */
+  width: 7em;
+  height: 3em;
+  background: linear-gradient(
+    90deg,
+    hsla(217, 100%, 50%, 1) 0%,
+    hsla(197, 100%, 64%, 1) 65%,
+    hsla(186, 100%, 69%, 1) 100%
+  );
+}
+button:active {
+  right: 0%;
+  bottom: 0%;
+}
+button {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: black;
+  color: white;
+  right: 10%;
+ bottom: 15%;
+ font-family: "Plus Jakarta Sans";
+ font-weight: normal;
+ font-size: 100%;
 }
 
 .welcomeMessage {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   grid-column: 2/3;
   /* background-color: beige; */
 }
@@ -58,6 +92,7 @@ height: 100vh;
   font-size: 300%;
   color: black;
   /* background-color: lightgreen; */
+
 }
 .headerLineTwo {
   grid-row: 2/3;
@@ -78,4 +113,13 @@ height: 100vh;
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.aboutMe {
+  margin-top: 0%;
+  padding-top: 1%;
+  width: 100vw;
+  height: 100vh;
+  background-color: beige;
+  scroll-snap-align: start;
 }
