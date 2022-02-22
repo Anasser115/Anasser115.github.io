@@ -1,23 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import './style/App.css';
+import './style/fonts/PlusJakartaSans-Bold.ttf';
+import './style/fonts/PlusJakartaSans-Medium.ttf';
+import LandingPage from './components/landingPage/landingPage.js';
+import ToolBar from './components/landingPage/toolBar.js';
+import { Routes , Link, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="Apps">
+    <Routes>
+       <Route path='' element={<LandingPage/>} />
+
+    </Routes>
     </div>
   );
 }

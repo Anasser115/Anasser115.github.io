@@ -1,0 +1,81 @@
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: local("./fonts/PlusJakartaSans-Bold.ttf");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: local("./fonts/PlusJakartaSans-Medium.ttf");
+  font-weight: normal;
+}
+
+html, body {
+  background-color: blue;
+}
+.Apps {
+  /* display: flex; */
+  background-color: red;
+height: 100vh;
+}
+
+.mainContainer {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr 4fr;
+  grid-template-columns: 1fr 1fr;
+  background-color: lightslategray;
+}
+
+.toolBar {
+  background-color: greenyellow;
+  grid-column: 1/3;
+}
+
+.landingBody {
+  grid-row: 2/5;
+  grid-column: 1/3;
+  display: grid;
+  grid-template-columns: 1fr 3fr 3fr 1fr;
+  /* background-color: lightpink; */
+}
+
+.welcomeMessage {
+  display: flex;
+  align-items: center;
+  grid-column: 2/3;
+  background-color: beige;
+}
+
+.largeHeader {
+  display: grid;
+  /* height: 100%; */
+  margin: 0%;
+  grid-template-rows: 1fr 1fr 1fr;
+  justify-items: start;
+  font-family: "Plus Jakarta Sans";
+  font-weight: bold;
+  font-size: 300%;
+  color: black;
+  background-color: lightgreen;
+}
+.headerLineTwo {
+  grid-row: 2/3;
+  /* background-color: yellow; */
+  width: 100%;
+}
+.headerLineThree {
+  grid-row: 3/4;
+}
+.coloredText {
+  grid-row: 1/2;
+  font-size: 1.3em;
+  background: linear-gradient(
+    90deg,
+    hsla(217, 100%, 50%, 1) 0%,
+    hsla(197, 100%, 64%, 1) 65%,
+    hsla(186, 100%, 69%, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
