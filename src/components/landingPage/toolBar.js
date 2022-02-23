@@ -1,14 +1,13 @@
 export default function ToolBar() {
   return (
     <main className="toolBar">
-      <section >
-        <h1>
-          <a >About</a>
-          <a >Work </a>
-          <a >Contact</a>
-        </h1>
+            <h2> عبد الرحمن</h2>
+        <h1 className="myName">ABDELRAHMAN HUSSEIN<a className="flickeringDot">.</a></h1>
+      <section className="toolBarButtons">
+         <button>About</button>
+         <button>Work</button>
+         <button>Contact</button>
       </section>
-
     </main>
   );
 }

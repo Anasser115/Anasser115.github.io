@@ -1,10 +1,12 @@
 import ToolBar from './toolBar.js';
+import personalPhoto from '../../style/personalPhoto.png';
 
 export default function LandingPage() {
   return (
     <main className='mainContainer'>
 
       <ToolBar />
+
     <main className="landingBody">
       <section className="welcomeMessage">
         <h1 className="largeHeader">
@@ -14,7 +16,9 @@ export default function LandingPage() {
         </h1>
        <section className='gradientShadow'><button>Book a Call</button></section>
       </section>
-
+      <section className='imageContainer'>
+        <img className='imageFrame' src={personalPhoto} />
+      </section>
     </main>
     </main>
   );

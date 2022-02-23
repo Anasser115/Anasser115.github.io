@@ -8,38 +8,154 @@
   src: local("./fonts/PlusJakartaSans-Medium.ttf");
   font-weight: normal;
 }
+@import url('https://fonts.googleapis.com/css2?family=Rakkas&display=swap');
 
 .Apps {
-
   /* background-color: red; */
+  width: 100vw;
   height: 100vh;
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
-
 }
 
 .mainContainer {
   width: 100vw;
   height: 100vh;
   display: grid;
-  grid-template-rows: 1fr 4fr;
+  grid-template-rows: 1fr 6fr;
   grid-template-columns: 1fr 1fr;
-  /* background-color: lightslategray; */
   scroll-snap-align: start;
+}
+.myName {
+  margin-top: 50px;
+  margin-right: 43%;
+  justify-self: flex-start ;
+  font-family: "Plus Jakarta Sans";
+  font-weight: bolder;
+}
+
+/*  */
+
+
+.flickeringDot {
+  opacity: 1;
+  animation: flicker 2s linear  reverse infinite;
+}
+@keyframes flicker {
+  0% {
+    opacity: 0.4;
+    color: #0062ff;
+  }
+  5% {
+    opacity: 0.5;
+    color: #0062ff;
+  }
+  10% {
+    opacity: 0.6;
+    color: #0062ff;
+  }
+  15% {
+    color: #0062ff;
+    opacity: 0.85;
+  }
+  25% {
+    color: #0062ff;
+    opacity: 0.5;
+  }
+  30% {
+    opacity: 1;
+    color: #0062ff;
+  }
+  35% {
+    opacity: 0.1;
+    color: #47cbff;
+  }
+  40% {
+    opacity: 0.25;
+    color: #47cbff;
+  }
+  45% {
+    opacity: 0.5;
+    color: #47cbff;
+  }
+  60% {
+    opacity: 1;
+    color: #47cbff;
+  }
+  70% {
+    opacity: 0.85;
+    color: #47cbff;
+  }
+  80% {
+    opacity: 0.4;
+    color: #47cbff;
+  }
+  90% {
+    opacity: 0.5;
+    color: #47cbff;
+  }
+  100% {
+    opacity: 1;
+    color: #47cbff;
+  }
+}
+
+/*  */
+h2 {
+  position: fixed;
+ right: 4vw;
+ top: 80vh;
+ z-index: -20;
+  font-family: 'Rakkas', cursive;
+  color: rgb(192, 189, 189);
+  font-size: 300%;
 }
 
 .toolBar {
-  /* background-color: greenyellow; */
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
   grid-column: 1/3;
+  /* background-color: green; */
+}
+.toolBarButtons {
+  display: flex;
+  flex-direction: row;
+  justify-items: flex-start;
+  align-items: flex-end;
+  width: 33%;
+  height: 100%;
+  font-size: 105%;
+}
+.toolBarButtons button {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  font-family: "Plus Jakarta Sans";
+  font-weight: bolder;
+  font-size: 105%;
+  background-color: transparent;
+  border: white;
+  color: black;
+  background: linear-gradient(#000, #000 50%, transparent 50%, transparent);
+  background-size: 101% 200%;
+  background-position: bottom;
+  transition: background 0.4s;
 }
 
+.toolBar button:hover {
+  background-position: top;
+  color: white;
+}
 .landingBody {
   grid-row: 2/5;
   grid-column: 1/3;
   display: grid;
-  grid-template-columns: 1fr 3fr 3fr 1fr;
+  align-items: center;
+  grid-template-columns: 1fr 2fr 1fr 3fr 1fr;
   /* background-color: lightpink; */
-
 }
 
 .gradientShadow {
@@ -51,33 +167,34 @@
   height: 3em;
   background: linear-gradient(
     90deg,
-    hsla(217, 100%, 50%, 1) 0%,
-    hsla(197, 100%, 64%, 1) 65%,
-    hsla(186, 100%, 69%, 1) 100%
+    #0062ff 0%,
+    #47cbff 65%,
+    #61efff 100%
   );
 }
-button:active {
+.gradientShadow button:active {
   right: 0%;
   bottom: 0%;
 }
-button {
+.gradientShadow button {
   width: 100%;
   height: 100%;
   position: relative;
   background-color: black;
   color: white;
   right: 10%;
- bottom: 15%;
- font-family: "Plus Jakarta Sans";
- font-weight: normal;
- font-size: 100%;
+  bottom: 15%;
+  font-family: "Plus Jakarta Sans";
+  font-weight: normal;
+  font-size: 100%;
 }
 
 .welcomeMessage {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  grid-column: 2/3;
+  grid-column: 2/4;
+  padding-left: 1%;
   /* background-color: beige; */
 }
 
@@ -92,7 +209,6 @@ button {
   font-size: 300%;
   color: black;
   /* background-color: lightgreen; */
-
 }
 .headerLineTwo {
   grid-row: 2/3;
@@ -116,10 +232,26 @@ button {
 }
 
 .aboutMe {
-  margin-top: 0%;
-  padding-top: 1%;
-  width: 100vw;
+  display: grid;
+  grid-template-rows: 2fr 1fr;
   height: 100vh;
-  background-color: beige;
   scroll-snap-align: start;
+}
+.aboutMeContainer {
+  margin: 1%;
+  grid-row: 1/2;
+  height: 100%;
+}
+.BlackBox {
+  grid-row: 2/3;
+  background-color: black
+}
+.imageContainer {
+  grid-column: 4/5;
+  width: 100%;
+  height: 100%;
+}
+.imageFrame {
+  width: 100%;
+  /* background-color: yellow; */
 }
