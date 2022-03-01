@@ -8,7 +8,7 @@
   src: local("./fonts/PlusJakartaSans-Medium.ttf");
   font-weight: normal;
 }
-@import url('https://fonts.googleapis.com/css2?family=Rakkas&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Rakkas&display=swap");
 
 .Apps {
   /* background-color: red; */
@@ -29,17 +29,16 @@
 .myName {
   margin-top: 50px;
   margin-right: 43%;
-  justify-self: flex-start ;
+  justify-self: flex-start;
   font-family: "Plus Jakarta Sans";
   font-weight: bolder;
 }
 
 /*  */
 
-
 .flickeringDot {
   opacity: 1;
-  animation: flicker 2s linear  reverse infinite;
+  animation: flicker 2s linear reverse infinite;
 }
 @keyframes flicker {
   0% {
@@ -103,10 +102,10 @@
 /*  */
 h2 {
   position: fixed;
- right: 4vw;
- top: 80vh;
- z-index: -20;
-  font-family: 'Rakkas', cursive;
+  right: 4vw;
+  top: 80vh;
+  z-index: -20;
+  font-family: "Rakkas", cursive;
   color: rgb(192, 189, 189);
   font-size: 300%;
 }
@@ -165,12 +164,7 @@ h2 {
   /* background-color: blueviolet; */
   width: 7em;
   height: 3em;
-  background: linear-gradient(
-    90deg,
-    #0062ff 0%,
-    #47cbff 65%,
-    #61efff 100%
-  );
+  background: linear-gradient(90deg, #0062ff 0%, #47cbff 65%, #61efff 100%);
 }
 .gradientShadow button:active {
   right: 0%;
@@ -235,16 +229,49 @@ h2 {
   display: grid;
   grid-template-rows: 2fr 1fr;
   height: 100vh;
+  justify-items: center;
   scroll-snap-align: start;
+  background-color: #6461ff;
 }
 .aboutMeContainer {
-  margin: 1%;
+  display: grid;
+  grid-template-rows: 4fr 1fr;
+  grid-template-columns: repeat(5,1fr);
   grid-row: 1/2;
-  height: 100%;
+  height: 100vh;
+  width: 100%;
+  background-color: #7bff61;
+}
+.aboutMeTitle{
+  display: flex;
+  flex-direction: column;
+  font-family: "Plus Jakarta Sans";
+  font-weight: bolder;
+  font-size: 200%;
+  grid-row: 1/2;
+  grid-column: 2/3;
+  align-items: center;
+  justify-content: center ;
+  background-color: #61efff;
+}
+.aboutMeText {
+  display: flex;
+  flex-direction: column;
+  grid-row: 1/2;
+  grid-column: 3/5;
+  align-items: center;
+  justify-content: center ;
+  font-family: "Plus Jakarta Sans";
+  font-weight: normal;
+  font-size: 120%;
+  width: 100%;
+  background-color: #ff9361;
 }
 .BlackBox {
   grid-row: 2/3;
-  background-color: black
+  grid-column: 1/6;
+  /* width: 100vw; */
+  background-color: black;
 }
 .imageContainer {
   grid-column: 4/5;
