@@ -1,8 +1,12 @@
+import { Link } from 'react-scroll';
+
 export default function AboutMe() {
   return (
-    <main className="aboutMe">
+    <main  id="aboutPage" className="aboutMe">
       <section className="aboutMeContainer">
-        <h1 className="aboutMeTitle">About Me</h1>
+        <h1 className="aboutMeTitle">About Me
+        <div className="aboutMeTitleUnderline">_________</div>
+        </h1>
         <article  className="aboutMeText">
         <p>
           An enthusiastic software engineer currently shaping the future of
@@ -25,7 +29,12 @@ export default function AboutMe() {
           up everyday!
         </p>
         </article>
-      <div className="BlackBox">elnhn</div>
+      <div class="BlackBox learnMore">
+        Learn More
+        <button className="learnMoreArrow"><Link to='myWorkPage' smooth={true} duration={1500}>&#10136;</Link></button>
+
+
+      </div>
       </section>
     </main>
   );
