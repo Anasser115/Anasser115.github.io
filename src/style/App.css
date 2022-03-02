@@ -1,21 +1,10 @@
-@font-face {
-  font-family: "Plus Jakarta Sans";
-  src: local("./fonts/PlusJakartaSans-Bold.ttf");
-  font-weight: bold;
-}
-@font-face {
-  font-family: "Plus Jakarta Sans";
-  src: local("./fonts/PlusJakartaSans-Medium.ttf");
-  font-weight: normal;
-}
 @import url("https://fonts.googleapis.com/css2?family=Rakkas&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 .Apps {
   /* background-color: red; */
   width: 100vw;
   height: 100vh;
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
 }
 
 .mainContainer {
@@ -24,14 +13,25 @@
   display: grid;
   grid-template-rows: 1fr 6fr;
   grid-template-columns: 1fr 1fr;
-  scroll-snap-align: start;
 }
 .myName {
   margin-top: 50px;
   margin-right: 43%;
   justify-self: flex-start;
-  font-family: "Plus Jakarta Sans";
-  font-weight: bolder;
+  font-family: "Outfit", sans-serif;
+  font-weight: 700;
+  /* font-size: 1.68vw; */
+}
+@media screen and (max-width: 500px) {
+  .myName {
+    font-size: 3vw;
+  }
+}
+@media screen and (max-width: 1200px) and (min-width: 501px) {
+  .myName {
+    /* Maximum font size */
+    font-size: 1.68vw;
+  }
 }
 
 /*  */
@@ -99,25 +99,21 @@
   }
 }
 
-/*  */
-h2 {
-  position: fixed;
-  right: 4vw;
-  top: 80vh;
-  z-index: -20;
+.arabicName {
+  align-self: end;
   font-family: "Rakkas", cursive;
   color: rgb(192, 189, 189);
-  font-size: 300%;
+  font-size: 2.5vw;
 }
 
-.toolBar {
+.toolBarContainer {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   grid-column: 1/3;
   /* background-color: green; */
 }
-.toolBarButtons {
+.toolBar {
   display: flex;
   flex-direction: row;
   justify-items: flex-start;
@@ -126,15 +122,15 @@ h2 {
   height: 100%;
   font-size: 105%;
 }
-.toolBarButtons button {
+.toolBarButtons {
   position: relative;
   width: 100%;
   height: 100%;
   top: 0;
   right: 0;
-  font-family: "Plus Jakarta Sans";
-  font-weight: bolder;
-  font-size: 105%;
+  font-family: "Outfit", sans-serif;
+  font-weight: 600;
+  font-size: 1.1vw;
   background-color: transparent;
   border: white;
   color: black;
@@ -144,7 +140,13 @@ h2 {
   transition: background 0.4s;
 }
 
-.toolBar button:hover {
+.buttonPadding {
+  padding: 30%;
+  padding-top: 100%;
+  padding-bottom: 100%;
+}
+
+.toolBarButtons:hover {
   background-position: top;
   color: white;
 }
@@ -178,7 +180,7 @@ h2 {
   color: white;
   right: 10%;
   bottom: 15%;
-  font-family: "Plus Jakarta Sans";
+  font-family: "Outfit", sans-serif;
   font-weight: normal;
   font-size: 100%;
 }
@@ -198,7 +200,7 @@ h2 {
   margin: 0%;
   grid-template-rows: 1fr 1fr 1fr;
   justify-items: start;
-  font-family: "Plus Jakarta Sans";
+  font-family: "Outfit", sans-serif;
   font-weight: bold;
   font-size: 300%;
   color: black;
@@ -224,55 +226,6 @@ h2 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
-.aboutMe {
-  display: grid;
-  grid-template-rows: 2fr 1fr;
-  height: 100vh;
-  justify-items: center;
-  scroll-snap-align: start;
-  background-color: #6461ff;
-}
-.aboutMeContainer {
-  display: grid;
-  grid-template-rows: 4fr 1fr;
-  grid-template-columns: repeat(5,1fr);
-  grid-row: 1/2;
-  height: 100vh;
-  width: 100%;
-  background-color: #7bff61;
-}
-.aboutMeTitle{
-  display: flex;
-  flex-direction: column;
-  font-family: "Plus Jakarta Sans";
-  font-weight: bolder;
-  font-size: 200%;
-  grid-row: 1/2;
-  grid-column: 2/3;
-  align-items: center;
-  justify-content: center ;
-  background-color: #61efff;
-}
-.aboutMeText {
-  display: flex;
-  flex-direction: column;
-  grid-row: 1/2;
-  grid-column: 3/5;
-  align-items: center;
-  justify-content: center ;
-  font-family: "Plus Jakarta Sans";
-  font-weight: normal;
-  font-size: 120%;
-  width: 100%;
-  background-color: #ff9361;
-}
-.BlackBox {
-  grid-row: 2/3;
-  grid-column: 1/6;
-  /* width: 100vw; */
-  background-color: black;
-}
 .imageContainer {
   grid-column: 4/5;
   width: 100%;
@@ -281,4 +234,104 @@ h2 {
 .imageFrame {
   width: 100%;
   /* background-color: yellow; */
+}
+
+/* Page 2 */
+
+.aboutMe {
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+  height: 100vh;
+  justify-items: center;
+  /* background-color: #6461ff; */
+}
+.aboutMeContainer {
+  display: grid;
+  grid-template-rows: 4fr 1fr;
+  grid-template-columns: repeat(5, 1fr);
+  grid-row: 1/2;
+  height: 100vh;
+  width: 100%;
+  /* background-color: #7bff61; */
+}
+.aboutMeTitle {
+  display: flex;
+  flex-direction: column;
+  font-family: "Outfit", sans-serif;
+  font-weight: bolder;
+  font-size: 200%;
+  grid-row: 1/2;
+  grid-column: 2/3;
+  align-items: center;
+  justify-content: center;
+  /* background-color: #61efff; */
+}
+.aboutMeTitleUnderline {
+  font-family: "Outfit", sans-serif;
+  font-weight: bold;
+  margin-top: -5%;
+  animation: flicker 2s linear reverse infinite;
+}
+.aboutMeText {
+  display: flex;
+  flex-direction: column;
+  grid-row: 1/2;
+  grid-column: 3/5;
+  align-items: center;
+  justify-content: center;
+  font-family: "Outfit", sans-serif;
+  font-weight: normal;
+  font-size: 1vw;
+  width: 100%;
+  /* background-color: #ff9361; */
+}
+.aboutMeText p {
+  width: 70%;
+}
+.BlackBox {
+  grid-row: 2/3;
+  grid-column: 1/6;
+  /* width: 100vw; */
+  /* background-color: red; */
+}
+.learnMore {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
+  font-size: 2vw;
+  color: rgb(216, 214, 214);
+}
+.learnMoreArrow {
+  background-color: transparent;
+  color: rgb(216, 214, 214);
+  font-size: 5vw;
+  border: none;
+  transform: rotate(45deg);
+  margin-top: -1%;
+  padding: 0;
+}
+.learnMoreArrow:hover {
+  font-size: 6vw;
+}
+.learnMoreArrow:active {
+  font-size: 6vw;
+}
+
+/* Page 3 */
+.projectContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-items: center;
+  background-color: bisque;
+}
+/* Page 4 */
+.contactContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-items: center;
+  background-color: aquamarine;
 }
