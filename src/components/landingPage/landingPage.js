@@ -3,7 +3,7 @@ import personalPhoto from '../../style/personalPhoto.png';
 
 export default function LandingPage() {
   return (
-    <main className='mainContainer'>
+    <main className='mainContainer' id='landingPage'>
 
       <ToolBar />
 
@@ -19,6 +19,7 @@ export default function LandingPage() {
       <section className='imageContainer'>
         <img className='imageFrame' src={personalPhoto} />
       </section>
+      <h2 className='arabicName'> عبد الرحمن</h2>
     </main>
     </main>
   );
